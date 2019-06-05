@@ -1,0 +1,168 @@
+/* 
+//1.-Calcular la multiplicación de dos matrices cuadradas de tamaño variable
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+	int A[10][10];
+	int B[10][10];
+	int C[10][10];
+	int filas,columnas;
+	
+	cout<<"Digite el numero de filas: "; cin>>filas;
+	cout<<"Digite el numero de columnas: "; cin>>columnas;
+	
+	//Rellenando matriz
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<columnas;j++){
+			cout<<"Digite un numero ["<<i<<"]["<<j<<"]: ";
+			cin>>A[i][j];
+		}
+	}
+	
+	//Rellenando matriz
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<columnas;j++){
+			cout<<"Digite un numero ["<<i<<"]["<<j<<"]: ";
+			cin>>B[i][j];
+		}
+	}
+	
+	//Multiplicando las matrices
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<columnas;j++){
+			C[i][j]=0;
+			for(int k=0;k<filas;k++){
+				C[i][j] = C[i][j] + A[i][k]*B[k][j];
+			}
+		}
+	}
+	
+	//Resultado de la multiplicacion
+	for(int i=0;i<filas;i++){
+		for(int j=0;j<columnas;j++){
+			cout<<C[i][j]<<"  ";
+		}
+		cout<<"\n";
+	}	
+	
+	getch();
+	return 0;
+}
+
+*/
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//2 Calcular el determinante de una matriz 3x3
+
+/*
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+	
+	int A[3][3];
+	int x,y,z,r,s,t,det;
+	
+	//introducir los numeros de una matriz
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cout<<"Digite un numero ["<<i<<"]["<<j<<"]: ";
+			cin>>A[i][j];
+		}
+	}
+	
+	//mostrar la matriz original
+	cout<<"\nMostrar Matriz\n";
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cout<<A[i][j]<<" ";
+		}
+		cout<<"\n"; 
+	}
+	
+	x = (A[1][1]*A[2][2]) - (A[1][2]*A[2][1]);
+	y = (A[1][0]*A[2][2]) - (A[1][2]*A[2][0]);
+	z = (A[1][0]*A[2][1]) - (A[1][1]*A[2][0]);
+	r = A[0][0] * x;
+	s = A[0][1] * y;
+	t = A[0][2] * z;
+	det = r-s+t;
+	
+	cout<<"\n"; 
+	cout<<det; 
+	cout<<"\n";
+	 
+getch();
+return 0;	
+}
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*3 Escribe un programa que defina un vector de números y muestre en la salida 
+estándar el vector en orden inverso—del último al primer elemento.*/
+/*
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+	int numeros[5] = {1,2,3,4,5}; //Definimos el arreglo
+	
+	for(int i=4;i>=0;i--){
+		cout<<numeros[i]<<endl; //Imprimimos el arreglo en orden inverso
+	}
+		
+	getch();
+	return 0;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+ 4.-Realice un programa que dado una matriz y sus dimensiones, devuelva su traspuesta.
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+	int numeros[3][3];
+	
+	//introducir los numeros de una matriz
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cout<<"Digite un numero ["<<i<<"]["<<j<<"]: ";
+			cin>>numeros[i][j];
+		}
+	}
+	
+	//mostrar la matriz original
+	cout<<"\nMatriz original\n";
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cout<<numeros[i][j]<<" ";
+		}
+		cout<<"\n"; 
+	}
+	
+	cout<<"\nMatriz Transpuesta\n";
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cout<<numeros[j][i]<<" ";
+		}
+		cout<<"\n";
+	}
+	
+	getch();
+	return 0;
+}
+*/ 
